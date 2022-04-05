@@ -1,0 +1,177 @@
+/* This is the solution thinked by Andrea Scacchi */
+
+/* Exercise 1 - Transition background color */
+.ex-1-square {
+    transition: background-color 3s;
+}
+.ex-1-square:hover {
+    background-color: red;
+}
+
+/* Exercise 2 - Transition width element*/
+
+.ex-2-square {
+    transition: width 2s;
+}
+.ex-2-square:hover {
+    width: 100%;
+}
+
+/* Exercise 3 - Transition border-radius */
+
+.ex-3-square {
+    transition: border-radius 2s;
+}
+.ex-3-square:hover {
+    border-radius: 50%;
+}
+
+/* Exercise 4 - Transition display */
+
+.ex-4-square {
+    transition: opacity 2s;
+}
+.ex-4-square:hover {
+    opacity: 0;
+}
+
+/* Exercise 5 - Double transition */
+
+.ex-5-square {
+    transition: all 2s;
+}
+.ex-5-square:hover {
+    transform: scale(180%);
+}
+.ex-5-square:active {
+    transform: scale(50%);
+}
+
+/* Exercise 6 - Img gray transition */
+.ex-6-img {
+    transition: all;
+}
+.ex-6-img:hover {
+    filter: grayscale(100%);
+}
+
+/* Exercise 7 - Img gray transition */
+.ex-7-img {
+    transition: all 2s;
+}
+.ex-7-img:hover {
+    filter: grayscale(100%);
+}
+
+/* Exercise 8 - Img two transition */
+.ex-8-img {
+    transition: all 2s;
+}
+.ex-8-img:hover {
+    filter: grayscale(100%);
+    border-radius: 50px;
+}
+
+/* Exercise 9 - Img two transition */
+.ex-9-img {
+    transition: transform 1s,
+                border-radius 3s;
+}
+.ex-9-img:hover {
+    transform: scale(150%);
+    border-radius: 50px;
+}
+
+/* Exercise 10 - Continuous spinning animation */
+.ex-10-icon {
+    animation-name: spinning;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes spinning {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Exercise 11 - Continuous spinning&counter animation */
+.ex-11-icon {
+    animation-name: counter-spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes counter-spin {
+    0% {
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Exercise 12 - Playing with borders */
+.ex-12-top-white,
+.ex-12-bottom-white {
+    transition: all 2s;
+}
+.ex-12-button:hover .ex-12-top-white {
+    transform: translateX(100px);
+}
+.ex-12-button:hover .ex-12-bottom-white {
+    transform: translateX(-80px);
+}
+
+/* Exercise 13 - Running around */
+.ex-13-top-white {
+    animation-name: top-white-circle;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.ex-13-bottom-white {
+    animation-name: bottom-white-circle;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes top-white-circle {
+    0% {
+        transform: translate(-30px, 0);
+    }
+    25% {
+        transform: translate(170px, 0);
+    }
+    50%{
+        transform: translate(170px, 70px);
+    }
+    75%{
+        transform: translate(-30px, 70px);
+    }
+    100% {
+        transform: translate(-30px, 0);
+    } 
+}
+@keyframes bottom-white-circle {
+    0% {
+        transform: translate(80px, 0);
+    }
+    25% {
+        transform: translate(-150px, 0);
+    }
+    50%{
+        transform: translate(-150px, -70px);
+    }
+    75%{
+        transform: translate(80px, -70px);
+    }
+    100% {
+        transform: translate(80px, 0);
+    }  
+}
